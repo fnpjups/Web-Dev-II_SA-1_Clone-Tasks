@@ -1,0 +1,91 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #121212; /* Dark background */
+    color: #e0e0e0; /* Light text color */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 20px;
+  }
+  
+  .quiz-container {
+    background-color: #1f1f1f; /* Dark container background */
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
+    width: 600px;
+    max-width: 100%;
+    overflow-y: auto;
+  }
+  
+  /* Styling for Question Section */
+  .question {
+    background-color: #333333;
+    color: #ffffff;
+    padding: 15px;
+    text-align: center;
+    border-radius: 5px;
+  }
+  
+  .question h2 {
+    font-size: 18px;
+  }
+  
+  /* Styling for Answer Choices */
+  .answers {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns for answers */
+    grid-gap: 10px;
+    justify-items: center; /* Center answer choices */
+  }
+  
+  .answers label {
+    background-color: #444444; /* Darker background for labels */
+    color: #ffffff; /* White text */
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+    cursor: pointer;
+  }
+  
+  .answers input[type="radio"] {
+    margin-right: 8px;
+  }
+  
+  /* Styling for Submit Button */
+  .submit {
+    text-align: center;
+  }
+  
+  .submit button {
+    background-color: #3f51b5; /* Blue button */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .submit button:hover {
+    background-color: #303f9f; /* Darker blue on hover */
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .answers {
+      grid-template-columns: 1fr; /* One column for small screens */
+    }
+  }
+  
